@@ -1,0 +1,4 @@
+sudo rm -rf dist build MANIFEST
+find . -iname '*~' | sudo xargs rm
+find . -iname *pyc | sudo xargs rm
+

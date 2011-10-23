@@ -1,0 +1,69 @@
+1. Dependencies
+2. Installation instructions
+	a) for Gentoo Linux
+	b) for Linux
+	c) for Windows
+
+------------------------------------------------------------------------------
+
+1)	Dependencies:
+
+* Python 2.4+ 
+		(http://www.python.org/)
+* Python Imaging Library (PIL) 1.1.4+
+		(http://www.pythonware.com/products/pil/)
+		
+For gui:
+* wxPython 2.6.0+
+		(http://www.wxpython.org/)
+
+------------------------------------------------------------------------------
+
+2)	Installation instructions:
+
+
+	a) Gentoo Linux install
+
+First, you need to set up a portage overlay, for example in /usr/local/overlay
+
+# mkdir /usr/local/overlay -p
+
+Now, tell portage about it. In /etc/make conf, include the line:
+
+PORTDIR_OVERLAY="/usr/local/overlay"
+
+Now, copy the ebuild in install/ to your overlay:
+
+# mkdir /usr/local/overlay/media-gfx/galleryforge -p
+# cp install/galleryforge-*.ebuild /usr/local/overlay/media-gfx/galleryforge
+
+Finally, create a digest for the ebuild.
+
+# cd /usr/local/overlay/media-gfx/galleryforge
+# ebuild galleryforge-*.ebuild digest
+
+Now, you can use emerge to install.
+
+# emerge galleryforge
+
+------------------------------------------------------------------------------
+
+	b) Generic Linux install
+
+Run the file install.py (you will need superuser priviliges for this):
+
+# python install.py
+
+------------------------------------------------------------------------------
+
+	c) Windows install
+
+Run the file install.py. This assume you have mime extensions set up to open
+.py files with python. Otherwise you'll have to run install.py from the
+command line (make sure the path to python.exe is correct)
+
+c:\> c:\python\python.exe install.py
+
+This will install galleryforge into c:\galleryforge.
+
+------------------------------------------------------------------------------

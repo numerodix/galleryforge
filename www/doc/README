@@ -1,0 +1,77 @@
+++ What's the point of galleryforge?
+I have taken quite a few pictures over the years. I also like to pick some of
+them to publish on my website. For every time I publish them, I create an
+"album" of images, which is little more than just keeping them organized and
+being to identify when they were published and what title they go under. I
+would then keep each album in a separate directory, simply because that's
+practical. I used a different program to create these albums in the past, but
+with the number of albums growing, I got tired of it and decided to roll my
+own solution, scratching an itch in the conventional hacker way. The
+assumption is that I have multiple directories, I would even like to
+categorize and sub categorize them, each directory is an album and each
+album has any number of images. Every album has a number of album pages, each
+of which displays a number of thumbnails of images, and clicking on a
+thumbnail opens a page with the image in full size.
+
+
+++ How does it work?
+galleryforge takes the supplied directory and scans all sub directories for
+image files. Where an image is found, the image is resized to the maximum
+allowed size and a thumbnail is created. For each of these directories
+galleryforge creates album pages (displaying thumbnails) and image pages
+(displaying full sized images).
+
+
+++ How to use it?
+Simply run 'galleryforge' and supply a path to your gallery. In the gallery,
+create directories for every album and place images inside them. Running
+galleryforge will process your images and create the html pages. Re-running
+galleryforge on directories where it has already run is safe, meaning existing
+images will not be overwritten (all html WILL be recreated, because it's not a
+large performance overhead, so that changes in templates are reflected in the
+new html).
+
+
+++ Which file formats are supported?
+galleryforge generates jpeg, gif and png images from jpeg, gif and png images 
+respectively. Formats supported for input are bmp, eps, pcd, pcx, ppm, tga,
+tiff, xpm.
+
+
+++ Quirks?
+It was not intended to keep images in directories which have both images and
+sub directories, so organize your directories so that each directory contains
+either only images or only directories. It was also not intended to keep
+images in the basedir of your gallery (because directory names are
+interpreted as album titles) the one directory containing all the other 
+directories (which in fact follows from the first rule). If you ignore this
+rule, galleryforge will not behave expected.
+
+
+++ How to run from the command line?
+On linux, simply run
+$ galleryforge <basedir_of_your_images>
+
+On Windows, run (make sure the path to python.exe is correct)
+c:\> c:\python\python.exe c:\galleryforge\bin\galleryforge 
+<basedir_of_your_images>
+
+
+++ How to run the gui?
+On linux, simply run
+$ galleryforge-gui
+
+On Windows, double click the "galleryforge-gui.py" icon on your desktop
+or run (make sure the path to python.exe is correct)
+c:\> c:\python\python.exe c:\galleryforge\bin\galleryforge-gui
+
+
+++ How can I customize the look of the HTML pages?
+galleryforge is made to be very customizable. The directory 'templates'
+contains the templates for all the pages generated. You can modify these
+files to your heart's content, just remember to keep the replacement tags,
+such as ${album} intact, otherwise galleryforge will complain.
+
+
+++ Where do I find more info on galleryforge?
+Try the project's website: http://galleryforge.berlios.de/

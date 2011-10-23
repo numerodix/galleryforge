@@ -1,0 +1,16 @@
+include clean
+include rdist
+recursive-include bin *
+recursive-include demo *
+recursive-include doc *
+recursive-include galleryforge *
+recursive-include install *
+recursive-include templates *
+global-include *.py
+global-include *.png
+global-include *.svg
+global-include *.xcf
+global-include *.wxg
+global-exclude *~
+global-exclude *pyc
+global-exclude .svn

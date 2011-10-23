@@ -1,0 +1,52 @@
+Dec 5 2006, Martin Matusiak:
+
++++ release 1.1.5, template fix
+* Standard templates changed to use Creative Commons license in place of
+silly copyright text.
+
+
+Apr 2 2006, Martin Matusiak:
+
++++ release 1.1.4, gui fix
+* Cosmetic display bug fixed.
+
+
+Jan 25 2006, Martin Matusiak:
+
++++ release 1.1.3, minor bugfix release
+* Album names deduced from directory names are now processed slightly more
+intelligently.
+* Small bother with choking at the absence of a config file now fixed.
+
+
+Jan 14 2006, Martin Matusiak:
+
++++ release 1.1.2, bugfix release
+* File locking bug on Windows fixed.
+* Images selected for processing twice on Windows caused all sorts of problems,
+now fixed.
+* All tests passed on Linux and WindowsXP.
+
+
+Jan 13 2006, Martin Matusiak:
+
++++ release 1.1.1
+* config module refactored, should be more stable now. Added some tests for it.
+
+
+Jan 12 2006, Martin Matusiak:
+
++++ release 1.1.0, bug fix release
+* Settings were not correctly read from configuration file.
+* 'Expert' options now migrated to separate tab in the gui.
+
+
+Jan 9 2006, Martin Matusiak:
+
++++ release 1.0.1, bug fix release
+* Resize botches quality fix applied.
+* Non-web format images now converted to jpeg.
+* album.py now also scans for images with uppercase file extension.
+* If dirnames are not in yyyymmdd-title format, they are given no title. Fix
+now applied to use the dirname instead.
+* Images now written at 95% quality.

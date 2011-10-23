@@ -1,0 +1,13 @@
+./clean
+python setup.py sdist
+#python setup.py bdist_wininst
+cd ~/code/galleryforge ; svn ci
+
+cd ~/code/galleryforge/src
+sudo rm /usr/portage/distfiles/galleryforge*.tar.gz
+sudo rm -rf /usr/local/portage/media-gfx/galleryforge/*
+
+sudo cp install/galleryforge*ebuild /usr/local/portage/media-gfx/galleryforge
+sudo cp dist/galleryforge*.tar.gz /usr/portage/distfiles
+sudo ebuild /usr/local/portage/media-gfx/galleryforge/galleryforge*ebuild digest
+
