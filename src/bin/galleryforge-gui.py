@@ -1,8 +1,11 @@
 #!/usr/bin/python
 
 import os, sys
-path_root = os.path.join("None")
-path = os.path.join("None", "gui")
+path_root = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    'galleryforge',
+)
+path = os.path.join(path_root, "gui")
 
 sys.path.append(path_root)
 sys.path.append(path)
