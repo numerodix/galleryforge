@@ -10,7 +10,7 @@
 """
 
 import os, glob, re, string
-import Image
+from PIL import Image
 from config import config
 from image import GalleryImage
 from logger import *

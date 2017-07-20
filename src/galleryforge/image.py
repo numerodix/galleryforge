@@ -8,7 +8,7 @@
 """
 
 import os, glob, shutil, string
-import Image
+from PIL import Image
 from logger import *
 from config import config
 
